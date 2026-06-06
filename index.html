@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Céu da Rainha do Mar — Ayudanos a preservar nuestro hogar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ocean:#5aa3d6;--ocean-deep:#3b7fae;--ocean-mid:#79bfe6;--ocean-soft:#c7eaf8;--sand:#f7f2eb;--sand-dark:#ede4d6;--gold:#c8973a;--gold-light:#e8b85a;--gold-pale:#fdf6e8;--text:#1c1c1c;--text-soft:#4a4a4a;--text-muted:#6d6d6d;--sans:'DM Sans',sans-serif;--serif:'Cormorant Garamond',serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--text);background:#fff;line-height:1.75;font-size:16px}
+.hero{background:var(--ocean-deep);padding:4rem 1.5rem 3.5rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 100%,rgba(30,95,138,0.45) 0%,transparent 70%);pointer-events:none}
+.hero-logo{width:150px;height:150px;object-fit:contain;margin-bottom:1.5rem;position:relative;padding:14px;background:rgba(90,163,214,0.08);border-radius:50%;filter:drop-shadow(0 10px 40px rgba(30,80,120,0.3))}
+.hero-eyebrow{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1.2rem;position:relative}
+.hero h1{font-family:var(--serif);font-size:clamp(2.2rem,5.5vw,3.8rem);font-weight:400;color:#fff;line-height:1.15;max-width:700px;margin:0 auto 1rem;position:relative}
+.hero h1 em{font-style:italic;color:var(--gold-light)}
+.hero-lead{font-size:clamp(1rem,2vw,1.1rem);color:rgba(255,255,255,.7);max-width:560px;margin:0 auto 2.5rem;font-weight:300;position:relative}
+.urgency-pill{display:inline-flex;align-items:center;gap:.6rem;background:rgba(200,151,58,.12);border:1px solid rgba(200,151,58,.35);border-radius:99px;padding:8px 20px;font-size:13px;color:var(--gold-light);position:relative}
+.urgency-dot{width:7px;height:7px;background:var(--gold-light);border-radius:50%;animation:pulse 1.8s ease infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
+.countdown{display:flex;gap:.8rem;justify-content:center;margin-bottom:2.5rem;position:relative}
+.cd-unit{text-align:center}
+.cd-num{font-family:var(--serif);font-size:2.4rem;font-weight:600;color:#fff;line-height:1;display:block}
+.cd-lbl{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:3px;display:block}
+.cd-sep{font-family:var(--serif);font-size:2rem;color:rgba(255,255,255,.2);align-self:flex-start;margin-top:4px}
+.btn-gold{display:inline-block;background:var(--gold);color:#fff;font-family:var(--sans);font-size:15px;font-weight:500;padding:15px 38px;border-radius:4px;text-decoration:none;letter-spacing:.02em;transition:all .3s ease;cursor:pointer;border:none}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 4px 12px rgba(200,151,58,.3)}
+.btn-outline{display:inline-block;background:transparent;color:rgba(255,255,255,.75);font-family:var(--sans);font-size:14px;padding:13px 30px;border:1px solid rgba(255,255,255,.2);border-radius:4px;text-decoration:none;transition:all .3s ease;cursor:pointer}
+.btn-outline:hover{border-color:rgba(255,255,255,.55);color:#fff}
+.hero-btns{display:flex;gap:.9rem;flex-wrap:wrap;justify-content:center;position:relative}
+.wave-svg{display:block;width:100%;margin-bottom:-2px}
+section{padding:4.5rem 1.5rem}
+.container{max-width:740px;margin:0 auto}
+.container-wide{max-width:980px;margin:0 auto}
+.s-label{font-size:11px;font-weight:500;letter-spacing:.17em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem}
+h2{font-family:var(--serif);font-size:clamp(1.9rem,4vw,2.9rem);font-weight:400;line-height:1.2;margin-bottom:1.4rem;color:var(--ocean-deep)}
+h2 em{font-style:italic;color:var(--ocean-mid)}
+p{color:var(--text-soft);margin-bottom:1.1rem;line-height:1.8}
+p:last-child{margin-bottom:0}
+.carta-bg{background:var(--sand)}
+.carta-inner{max-width:680px;margin:0 auto}
+.firma-wrap{display:grid;grid-template-columns:100px 1fr;gap:2rem;align-items:start;margin-bottom:2rem}
+@media(max-width:500px){.firma-wrap{grid-template-columns:1fr}}
+.avatar{width:100px;height:100px;border-radius:50%;background:var(--ocean);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;border:3px solid var(--sand-dark)}
+.avatar-initials{font-family:var(--serif);font-size:2.2rem;color:rgba(255,255,255,.5)}
+.firma-name{font-family:var(--serif);font-size:1.4rem;font-weight:500;color:var(--ocean-deep);margin-bottom:2px}
+.firma-role{font-size:12px;color:var(--text-muted);letter-spacing:.05em;margin-bottom:.8rem}
+.carta-text p{font-size:16px;line-height:1.85;color:var(--text-soft)}
+.carta-text p.opening{font-family:var(--serif);font-size:1.15rem;font-style:italic;color:var(--ocean);margin-bottom:1.4rem}
+.timeline-bg{background:#fff}
+.timeline{margin-top:2.5rem;position:relative;padding-left:2rem;border-left:2px solid var(--sand-dark)}
+.tl-item{position:relative;margin-bottom:2rem;padding-left:1.2rem}
+.tl-item::before{content:'';position:absolute;left:-2.45rem;top:6px;width:10px;height:10px;border-radius:50%;background:var(--gold);border:2px solid #fff;box-shadow:0 0 0 2px var(--gold)}
+.tl-year{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:3px}
+.tl-item h4{font-family:var(--serif);font-size:1.15rem;font-weight:500;color:var(--ocean-deep);margin-bottom:4px}
+.tl-item p{font-size:14px;color:var(--text-muted);margin:0;line-height:1.7}
+.momento-bg{background:var(--ocean-deep);color:#fff}
+.momento-bg h2{color:#fff}
+.momento-bg p{color:rgba(255,255,255,.72)}
+.nums-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin:2rem 0}
+.num-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:1.4rem 1.2rem;text-align:center}
+.num-card.urgent{border-color:rgba(200,151,58,.45);background:rgba(200,151,58,.07)}
+.num-card .lbl{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:6px}
+.num-card.urgent .lbl{color:var(--gold-light)}
+.num-card .val{font-family:var(--serif);font-size:2.2rem;font-weight:600;color:#fff;line-height:1}
+.num-card .sub{font-size:12px;color:rgba(255,255,255,.4);margin-top:5px}
+.num-card.urgent .sub{color:rgba(232,184,90,.75)}
+.promise-box{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:1.5rem 1.8rem;margin-top:2rem;font-size:14px;color:rgba(255,255,255,.5);line-height:1.75}
+.promise-box strong{color:rgba(255,255,255,.7)}
+.impacto-bg{background:var(--sand)}
+.impact-list{list-style:none;margin-top:2rem}
+.impact-list li{display:flex;gap:1.1rem;align-items:flex-start;padding:1.1rem 0;border-bottom:1px solid var(--sand-dark)}
+.impact-list li:last-child{border-bottom:none}
+.ic{width:34px;height:34px;min-width:34px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;border:1px solid var(--sand-dark)}
+.ic svg{width:15px;height:15px;stroke:var(--ocean);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.impact-list strong{display:block;font-size:15px;font-weight:500;color:var(--ocean-deep);margin-bottom:2px}
+.impact-list span{font-size:14px;color:var(--text-muted)}
+.ayudar-bg{background:#fff}
+.ayudar-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.8rem}
+@media(max-width:600px){.ayudar-grid{grid-template-columns:1fr}}
+.ayuda-card{background:var(--sand);border:1px solid var(--sand-dark);border-radius:8px;padding:1.5rem}
+.ayuda-card .tier{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:6px}
+.ayuda-card h4{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--ocean-deep);margin-bottom:6px}
+.ayuda-card .rng{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--ocean);margin-bottom:.9rem}
+.ayuda-card ul{list-style:none;font-size:13px;color:var(--text-soft);line-height:1.9}
+.ayuda-card ul li::before{content:'→  ';color:var(--gold);font-size:11px}
+.donar-bg{background:var(--ocean-deep);text-align:center}
+.donar-bg h2{color:#fff}
+.donar-bg > .container > p{color:rgba(255,255,255,.65);max-width:520px;margin:0 auto 2rem}
+.payment-block{max-width:480px;margin:0 auto 2rem;display:flex;flex-direction:column;gap:.9rem}
+.pay-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:1.2rem 1.6rem;text-align:left}
+.pay-box .pay-lbl{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:6px}
+.pay-box .pay-val{font-family:'Courier New',monospace;font-size:15px;color:var(--gold-light);letter-spacing:.05em;word-break:break-all}
+.pay-box .pay-val a{color:var(--gold-light);text-decoration:none}
+.pay-box .pay-val a:hover{text-decoration:underline}
+.pay-box .pay-note{font-size:12px;color:rgba(255,255,255,.35);margin-top:5px}
+.donar-btns{display:flex;gap:.9rem;flex-wrap:wrap;justify-content:center;margin-bottom:2rem}
+.sticky{position:fixed;bottom:0;left:0;right:0;background:var(--ocean-deep);border-top:1px solid rgba(255,255,255,.1);padding:11px 1.5rem;display:flex;align-items:center;justify-content:space-between;z-index:1000;transform:translateY(100%);transition:transform .3s ease}
+.sticky.on{transform:translateY(0)}
+.sticky-txt{font-size:13px;color:rgba(255,255,255,.65)}
+.sticky-txt strong{color:var(--gold-light)}
+.sticky-btn{white-space:nowrap;background:var(--gold);color:#fff;font-size:13px;font-weight:500;padding:9px 22px;border-radius:4px;text-decoration:none;flex-shrink:0;border:none;cursor:pointer;transition:all .3s ease}
+.sticky-btn:hover{background:var(--gold-light);transform:translateY(-1px)}
+footer{background:#07111a;padding:2rem 1.5rem;text-align:center;font-size:12px;color:rgba(255,255,255,.22);line-height:2.2}
+footer a{color:rgba(255,255,255,.35);text-decoration:none}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.hero>*{animation:fadeUp .75s ease both}
+.hero>*:nth-child(1){animation-delay:.1s}
+.hero>*:nth-child(2){animation-delay:.22s}
+.hero>*:nth-child(3){animation-delay:.35s}
+.hero>*:nth-child(4){animation-delay:.48s}
+.hero>*:nth-child(5){animation-delay:.58s}
+.hero>*:nth-child(6){animation-delay:.68s}
+</style>
+</head>
+<body>
+<section class="hero" id="top">
+  <img class="hero-logo" src="./images/logo.png" alt="Céu da Rainha do Mar" />
+  <div class="hero-eyebrow">Mallorca, Islas Baleares · Comunidad de Santo Daime</div>
+  <h1>Llevamos 32 años aquí.<br>Necesitamos <em>tu ayuda</em> para quedarnos.</h1>
+  <p class="hero-lead">Ayudanos a proteger nuestro hogar espiritual.</p>
+  <div class="urgency-pill"><span class="urgency-dot"></span>Campaña urgente — plazo final de junio 2026</div>
+  <div class="countdown">
+    <div class="cd-unit"><span class="cd-num" id="cd-d">--</span><span class="cd-lbl">Días</span></div>
+    <span class="cd-sep">:</span>
+    <div class="cd-unit"><span class="cd-num" id="cd-h">--</span><span class="cd-lbl">Horas</span></div>
+    <span class="cd-sep">:</span>
+    <div class="cd-unit"><span class="cd-num" id="cd-m">--</span><span class="cd-lbl">Minutos</span></div>
+  </div>
+  <div class="hero-btns">
+    <a href="#donar" class="btn-gold">Quiero contribuir</a>
+    <a href="#historia" class="btn-outline">Leer nuestra historia</a>
+  </div>
+</section>
+
+<svg class="wave-svg" viewBox="0 0 1440 55" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <path d="M0 55 L0 28 Q360 0 720 28 Q1080 55 1440 28 L1440 55 Z" fill="#f7f2eb"/>
+</svg>
+
+<section class="carta-bg" id="carta">
+  <div class="container carta-inner">
+    <p class="s-label">Un mensaje personal</p>
+    <div class="firma-wrap">
+      <div class="avatar"><span class="avatar-initials">E</span></div>
+      <div>
+        <div class="firma-name">Esperanza y Miguel Ángel</div>
+        <div class="firma-role">Fundadores · Céu da Rainha do Mar · Mallorca</div>
+      </div>
+    </div>
+    <div class="carta-text">
+      <p class="opening">Querida hermandad: escribimos esto con el corazón abierto, como solo se puede escribir entre quienes comparten el camino del Daime.</p>
+      <p>A finales de marzo recibimos la notificación de que debíamos abandonar la casa donde se encuentra nuestra iglesia. Sin embargo, el banco nos ha ofrecido la posibilidad de adquirirla por 490.000 €, un precio especial que no volverá a repetirse.</p>
+      <p>Esta casa es mucho más que un lugar físico. Es nuestro templo, nuestro hogar y el corazón de la familia daimista en Mallorca. Aquí realizamos nuestros trabajos espirituales, recibimos hermanos de toda Europa, celebramos los cumpleaños de nuestros santos y nos cuidamos los unos a los otros.</p>
+      <p>No somos expertos en campañas ni en marketing. Somos fardados de la doctrina que hoy acuden a su familia espiritual en el momento más importante de nuestra historia.</p>
+    </div>
+  </div>
+</section>
+
+<section class="timeline-bg" id="historia">
+  <div class="container">
+    <p class="s-label">Nuestra historia</p>
+    <h2>32 años de doctrina<br><em>en las Baleares</em></h2>
+    <p>Una historia que comenzó en Ibiza en 1993 y que, paso a paso, construyó una comunidad que hoy es familia.</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-year">1993</div>
+        <h4>El primer encuentro</h4>
+        <p>En septiembre Miguel y Esperanza se enamoran del Daime en Ibiza y en diciembre viajan a Mapiá a conocer la doctrina en su origen. Allí se casan siendo sus padrinos el Padrinho Alfredo y la Madrinha Francisca.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1994</div>
+        <h4>Llegada a Mallorca</h4>
+        <p>El día 1º de junio llegan a la isla con Sacramento entregado por el Padrino Alfredo. En agosto Caparelli trae un grupo de fardados y celebran el primer trabajo. Ese es el día que se celebra como nacimiento de Céu da Rainha do Mar.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2001</div>
+        <h4>Legalización: nace la ADE</h4>
+        <p>Tras el arresto de Chico Corrente y Fernando Ribeiro en el año 2000, finalmente conseguimos con mucha alegría registrar legalmente nuestra doctrina en España, que a día de hoy es ICEFLU (Iglesia del Centro Espiritual Fluente Luz Universal).</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2008</div>
+        <h4>El Salón Dorado</h4>
+        <p>Después de 14 años moviéndose por toda la isla, por fin encuentran esta casa, con un garaje destartalado que Miguel convirtió en el Salão Dourado que ahora es.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2017</div>
+        <h4>Fuerza de la Floresta</h4>
+        <p>En 2017, después de diecisiete años viviendo en el Céu do Mapiá, llegó a nuestra iglesia Marta, hija de Esperanza, con su marido Samuel nieto de la madrina María Brilhante, trayendo energía renovada y generaciones nuevas.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">Hoy</div>
+        <h4>Pequeños pero grandes</h4>
+        <p>Siendo pequeños somos la iglesia mayor de España. Tenemos a nuestro cuidado el plantío de Jagube y Rainha del proyecto Daime Eterno el cual celamos con mucho amor. Nos sentimos honrados de ser guardianes de esta luz en Occidente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="momento-bg" id="momento">
+  <div class="container">
+    <p class="s-label" style="color:var(--gold)">El momento</p>
+    <h2>Por qué es ahora<br><em>o nunca</em></h2>
+    <p>El espacio que habitamos está en venta. Si no actuamos antes de finales de junio de 2026, lo perdemos. No hay una segunda oportunidad para reconstruir 32 años de historia compartida.</p>
+    <div class="nums-grid">
+      <div class="num-card urgent">
+        <div class="lbl">⚡ Urgente · antes de junio</div>
+        <div class="val">490.000 €</div>
+        <div class="sub">Precio de oferta del banco para adquisición</div>
+      </div>
+      <div class="num-card">
+        <div class="lbl">Valor de mercado</div>
+        <div class="val">800.000 €</div>
+        <div class="sub">Valor real de la propiedad</div>
+      </div>
+    </div>
+    <div class="promise-box">
+      <strong>Compromiso de transparencia total:</strong> El Céu da Rainha do Mar forma parte de Iceflu España iglesia legalizada desde 2001 en nuestro pais y está gestionada por Madre Tierra, Asociación Balear de Intercambio y Cooperación con la Amazonia. Puedes verificar todos nuestros documentos legales directamente con Esperanza.
+    </div>
+  </div>
+</section>
+
+<section class="impacto-bg" id="impacto">
+  <div class="container">
+    <p class="s-label">Lo que protegemos</p>
+    <h2>Por qué este espacio<br><em>no se puede perder</em></h2>
+    <ul class="impact-list">
+      <li>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div><strong>Un hogar permanente para la doctrina en Baleares</strong><span>Propiedad propia significa ceremonia protegida, sin depender de un propietario externo que pueda cambiar de decisión. Es libertad espiritual y seguridad para nuestra práctica.</span></div>
+      </li>
+      <li>
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+        <div><strong>Continuidad para las generaciones que vienen</strong><span>Un santuario propio puede abrir sus puertas con seguridad a nuevas personas que buscan la doctrina en las Baleares y en toda Europa, perpetuando esta luz.</span></div>
+      </li>
+      <li>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div><strong>Protección del entorno natural</strong><span>El espacio físico y su naturaleza forman parte integral de nuestra práctica. Como propietarios, podemos cuidarlo y preservarlo para las generaciones venideras.</span></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="ayudar-bg" id="ayudar">
+  <div class="container">
+    <p class="s-label">Cómo puedes ayudar</p>
+    <h2>Una contribución que<br><em>deja huella para siempre</em></h2>
+    <p>Esta página no es una campaña pública. La compartimos únicamente dentro de nuestra familia espiritual porque creemos en la confianza que nace dentro de la doctrina.</p>
+    <p>No hay una cantidad mínima. Toda contribución es un acto de amor hacia este proyecto. Y para quienes puedan hacer algo mayor, queremos reconocerlo de forma especial:</p>
+    <div class="ayudar-grid">
+      <div class="ayuda-card">
+        <div class="tier">Colaborador</div>
+        <h4>Semilla</h4>
+        <div class="rng">Cualquier importe</div>
+        <ul>
+          <li>Reconocimiento en el libro de co-fundadores</li>
+          <li>Carta personal de agradecimiento de Esperanza</li>
+          <li>Actualizaciones directas sobre el proceso</li>
+        </ul>
+      </div>
+      <div class="ayuda-card">
+        <div class="tier">Guardián del santuario</div>
+        <h4>Raíz</h4>
+        <div class="rng">2.000 € – 10.000 €</div>
+        <ul>
+          <li>Todo lo anterior</li>
+          <li>Placa permanente en el espacio físico</li>
+          <li>Llamada personal de Esperanza</li>
+          <li>Invitación a visitar el santuario en Mallorca</li>
+        </ul>
+      </div>
+      <div class="ayuda-card" style="grid-column:1/-1">
+        <div class="tier">Co-fundador del santuario</div>
+        <h4>Árbol</h4>
+        <div class="rng">10.000 € en adelante</div>
+        <ul>
+          <li>Todo lo anterior</li>
+          <li>Reconocimiento permanente como co-fundador del Céu da Rainha do Mar</li>
+          <li>Dedicatoria especial cuando el espacio sea nuestro</li>
+          <li>Relación directa y continua con la comunidad</li>
+          <li>Tu nombre forma parte de esta historia para siempre</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="donar-bg" id="donar">
+  <div class="container">
+    <p class="s-label" style="color:var(--gold)">Cómo contribuir</p>
+    <h2>Cada aportación<br><em>cambia algo real</em></h2>
+    <p>Puedes transferir directamente o contactar con Esperanza para hablar antes. No hay prisa en la conversación — solo en el tiempo que tenemos.</p>
+    <div class="payment-block">
+      <div class="pay-box">
+        <div class="pay-lbl">Transferencia bancaria (IBAN)</div>
+        <div class="pay-val">ES02 1491 0001 2830 0014 6579</div>
+        <div class="pay-note">Titular: Madre Tierra, Asociación Balear de Intercambio y Cooperación con la Amazonia. Concepto: Donación santuario</div>
+      </div>
+      <div class="pay-box">
+        <div class="pay-lbl">Contacto directo — Esperanza</div>
+        <div class="pay-val"><a href="tel:+34627242448">+34 627 24 24 48</a></div>
+        <div class="pay-note">WhatsApp o llamada · Para dudas, coordinar transferencia o hablar</div>
+      </div>
+    </div>
+    <div class="donar-btns">
+      <a href="tel:+34627242448" class="btn-gold">Llamar a Esperanza</a>
+      <a href="https://wa.me/34627242448" target="_blank" class="btn-outline">Escribir por WhatsApp</a>
+    </div>
+    <div class="promise-box" style="max-width:540px;margin:0 auto">
+      <strong>¿Tienes preguntas?</strong> Podemos enviarte la documentación legal de la asociación, los estatutos o cualquier información que necesites. Solo pídelo a Esperanza directamente.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Céu da Rainha do Mar · Mallorca · 2025</p>
+  <p>Una comunidad del Santo Daime en las Islas Baleares</p>
+</footer>
+
+<script>
+function updateCountdown(){
+  const target = new Date('2026-06-30').getTime();
+  const now = new Date().getTime();
+  const diff = target - now;
+  if(diff > 0){
+    const days = Math.floor(diff / (1000*60*60*24));
+    const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+    const minutes = Math.floor((diff % (1000*60*60)) / (1000*60));
+    document.getElementById('cd-d').textContent = days;
+    document.getElementById('cd-h').textContent = hours;
+    document.getElementById('cd-m').textContent = minutes;
+  }
+}
+updateCountdown();
+setInterval(updateCountdown, 60000);
+
+window.addEventListener('scroll', () => {
+  const donarSection = document.getElementById('donar');
+  const sticky = document.querySelector('.sticky');
+  if(donarSection && sticky){
+    const rect = donarSection.getBoundingClientRect();
+    if(rect.top < 0){
+      sticky.classList.remove('on');
+    } else {
+      sticky.classList.add('on');
+    }
+  }
+});
+</script>
+</body>
+</html>
